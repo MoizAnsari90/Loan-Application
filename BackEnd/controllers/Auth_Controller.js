@@ -9,7 +9,7 @@ dotenv.config()
 
 export const register_controller = async (req, res) => {
     try {
-        const { username, phone, cnic, purpose, address , email , password } = req.body;
+        const {username, phone, cnic, purpose, address , email , password } = req.body;
 
         if (!username || !phone || !cnic || !purpose || !address  || !email || !password) {
             return res.status(400).json({ status: 400, message: enum_state.INVALID_REQUEST });
